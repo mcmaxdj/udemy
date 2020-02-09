@@ -2,7 +2,7 @@
 var money = prompt('Your monthly budget is?', '');
 var data = prompt('Enter date in YYYY-MM-DD format.', '');
 var days = 30;
-var oneDayBudget = parseInt((money - answer2) / days);
+var oneDayBudget = (money - answer2) / days;
 
 var appData = {
   'budget': 'money',
