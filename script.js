@@ -1,10 +1,8 @@
 // Udemy home task 
-var money = prompt('Your monthly budget is?', '');
-var data = prompt('Enter date in YYYY-MM-DD format.', '');
-var days = 30;
-var oneDayBudget = (money - answer2) / days;
+let money = +prompt('Your monthly budget is?', '');
+let data = prompt('Enter date in YYYY-MM-DD format.', '');
 
-var appData = {
+let appData = {
   budget: money,
   timeData: data,
   expenses : {},
@@ -13,13 +11,49 @@ var appData = {
   savings: false
 };
 
-var answer1 = prompt('Enter must-have expenses this month.', '');
-var answer2 = parseInt(prompt('How much it will cost?', ''));
-var answer3 = prompt('Enter must-have expenses this month.', '');
-var answer4 = parseInt(prompt('How much it will cost?', ''));
+for (let i = 0; i < 2; i++) {
+  let a = prompt('Enter must-have expenses this month.', '');
+  let b = +prompt('How much it will cost?', '');
 
-appData.expenses.answer1 = answer2;
-appData.expenses.answer3 = answer4;
+  if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+    && a != '' && b != '' && a.length < 20) {
+      appData.expenses[a] = b;
+  }
+};
+
+// let i = 0;
+// do {
+//   i++;
+//   let a = prompt('Enter must-have expenses this month.', '');
+//   let b = +prompt('How much it will cost?', '');
+//   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null 
+//     && (typeof(a)) != '' && a.length < 20 ) {
+//       appData.expenses[a] = b;
+//     }
+// }
+// while (i < 2);
+
+// let i = 0;
+// while (i < 2) {
+//   let a = prompt('Enter must-have expenses this month.', '');
+//   let b = +prompt('How much it will cost?', '');
+//   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+//     && (typeof(a)) != '' && a.length < 20 ) {
+//       appData.expenses[a] = b;
+//   }
+//   i++;
+// }
+
+appData.moneyPerDay = appData.budget / 30;
+alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+
+if (appData.moneyPerDay < 500) {
+  console.log('Small');
+} else if (appData.moneyPerDay > 500 && appData.moneyPerDay < 1000) {
+  console.log('middle');
+} else if (appData.moneyPerDay > 1000) {
+  console.log('hight');
+} else {
+  console.log('error');
+}
   
-console.log(appData.expenses);
-alert(oneDayBudget);
