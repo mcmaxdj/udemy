@@ -44,3 +44,53 @@
 //   }
 //   console.log(i);
 // }
+
+// let num = 20;
+// function showFirstMessage(text) {
+//   alert(text);
+//   num = 10;
+// }
+
+// showFirstMessage("some text");
+// console.log(num);
+
+// function retVar() {
+//   let num = 50;
+//   return num;
+// }
+// let anotherNum = retVar();
+// console.log(anotherNum);
+
+// let i = 0;
+// do {
+//   i++;
+//   let a = prompt('Enter must-have expenses this month.', '');
+//   let b = +prompt('How much it will cost?', '');
+//   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null 
+//     && (typeof(a)) != '' && a.length < 20 ) {
+//       appData.expenses[a] = b;
+//     }
+// }
+// while (i < 2);
+
+// let i = 0;
+// while (i < 2) {
+//   let a = prompt('Enter must-have expenses this month.', '');
+//   let b = +prompt('How much it will cost?', '');
+//   if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+//     && (typeof(a)) != '' && a.length < 20 ) {
+//       appData.expenses[a] = b;
+//   }
+//   i++;
+// }
+let appData = {
+  optionalExpenses: {}
+};
+function chooseOptExpenses() {
+  for (let y = 0; y < 3; y++) {
+     let c = prompt('введите номер ' + (y + 1), '');
+     let d = prompt('введите сумму расходов', '');
+     appData.optionalExpenses[c] = d;
+  }
+}
+chooseOptExpenses();
