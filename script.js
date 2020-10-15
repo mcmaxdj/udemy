@@ -65,7 +65,7 @@ function checkSavings() {
 checkSavings(); 
  
 function chooseOptExpenses() {
-  for (let y = 0; y < 3; y++) {
+  for (let y = 1; y <= 3; y++) {
      let optionalExpensesAnswer = prompt('введите статью необязательных расходов', '');
      appData.optionalExpenses[y] = optionalExpensesAnswer;
      console.log(appData.optionalExpenses);
