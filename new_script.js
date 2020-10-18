@@ -15,13 +15,10 @@ let personalMoviesDB = {
   genres: [],
   privat: false
 };
-console.log(personalMoviesDB);
 
 let questionOne = prompt("One of the last viewed movies?", ""),
     questionTwo = prompt("How do you rate it?", "");
-    console.log(questionOne);
-    console.log(questionTwo);
 
-    personalMoviesDB.movies[questionOne] = questionTwo;
+personalMoviesDB.movies[questionOne] = questionTwo;
 
-    console.log(personalMoviesDB);
+console.log(personalMoviesDB);
