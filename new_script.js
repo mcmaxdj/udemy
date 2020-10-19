@@ -61,13 +61,30 @@ let personalMoviesDB = {
   genres: [],
   privat: false
 };
-let a = prompt("One of the last viewed movies?", ""),
-    b = prompt("How do you rate it?", ""),
-    c = prompt("One of the last viewed movies?", ""),
-    d = prompt("How do you rate it?", "");
 
-personalMoviesDB.movies[a] = b;
-personalMoviesDB.movies[c] = d;
+for (let i = 0; i < 2; i++) {
+  let a = prompt("One of the last viewed movies?", ""),
+      b = prompt("How do you rate it?", "");
+
+  if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+    personalMoviesDB.movies[a] = b;
+    console.log('Done!')
+  } else {
+    console.log('error');
+    i--;
+  }
+}
+
+if (personalMoviesDB.count < 10) {
+  console.log('You watched less movies!');
+} else if (personalMoviesDB.count >= 10 && personalMoviesDB.count < 30) {
+  console.log('You are classic mivies watcher!');
+} else if (personalMoviesDB.count >= 30) {
+  console.log('You are Kinoman!!!');
+} else {
+  console.log ('Something Went Wrong!');
+}
+
 console.log(personalMoviesDB);
 
 
