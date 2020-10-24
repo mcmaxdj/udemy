@@ -71,4 +71,32 @@
 
 // --------------- Start ---------------
 
- 
+//  let options = {
+//    name: 'Your name',
+//    age: 'Your age',
+//    gender: 'Your gender',
+//    isMarried: null,
+//    family: {
+//      father: 'Your father`s name',
+//      mother: 'Your mother`s name'
+//    },
+//    makeTest: function(){
+//      console.log('Some Test Log...');
+//    }
+//  };
+//  options.makeTest();
+
+//  console.log(Object.keys(options));
+
+// let {father, mother} = options.family; // Деструктуризация
+// console.log(father);
+
+// for (let key in options) {
+//   if (typeof(options.family) == 'string') {
+//     for (let i in options.key) {
+//       console.log(`Свойство ${i} имеет значение ${options.key[i]}`);
+//     }
+//   } else {
+//     console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//   }
+// }
