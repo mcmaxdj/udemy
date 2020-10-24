@@ -100,3 +100,28 @@
 //     console.log(`Свойство ${key} имеет значение ${options[key]}`);
 //   }
 // }
+
+// --------------- Start ---------------
+
+// let arr = [4, 3, 6, 2, 41, 4, 0, 9, 32];
+// arr.sort(compareNum);
+// console.log(arr);
+// function compareNum(a, b) {
+//   return a - b;
+// }
+//arr.pop();
+//arr.push(12);
+//arr[99] = 7;
+//console.log(arr.length);
+
+// arr.forEach(function(item, i, arr){
+//   console.log(`Index ${i}: value - ${item} in array ${arr}`);
+// });
+
+// let arr2 = prompt("Введите данные через запятую с пробелом", "");
+// let userData =arr2.split(', ');
+
+// console.log(userData.sort());
+// console.log(userData.join('; '));
+
+// --------------- Start ---------------
