@@ -125,3 +125,103 @@
 // console.log(userData.join('; '));
 
 // --------------- Start ---------------
+// let a = 5,
+//     b = a;
+
+// b = b + 5;
+// console.log(a);
+// console.log(b); // идет передача по значению
+// // ---------------- 
+// let obj = {
+//   a: 5,
+//   b: 1
+// };
+// let objCopy = obj;
+// objCopy.a = 10;
+// console.log(obj);
+// console.log(objCopy); // идет передача по ссылке
+// ----------------  копирование объекта (поверхностное копирование)
+// function copy(mainObj) {
+//   let firstObj = {};
+//   let key;
+//   for (key in mainObj) {
+//     firstObj[key] = mainObj[key];
+//   }
+//   return firstObj;
+// }
+
+// let numbers = {
+//   a: 1,
+//   b: 2,
+//   c: {
+//     x: 3,
+//     y: 4
+//   }
+// };
+
+// let newNumbers = copy(numbers);
+
+// newNumbers.a = 5;
+// newNumbers.c.x = 6; // в таком случае передача значения идет так же по ссылке (если есть вложенность)
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+// ---------------- 
+
+// let numbers = { // копия объектов
+//     a: 1,
+//     b: 2,
+//     c: {
+//       x: 3,
+//       y: 4
+//     }
+//   };
+// let add = {
+//   d: 11,
+//   e: 21
+// };
+// console.log(Object.assign(numbers, add));
+
+// let clone = Object.assign({}, add);
+// clone.d = 33;
+// console.log(add);
+// console.log(clone);
+
+// ---------------- 
+
+// let oldArray = ['a', 'b', 'c']; // копия массивов
+// let newArray = oldArray.slice();
+
+// newArray[1] = 'zzz';
+
+// console.log(newArray);
+// console.log(oldArray);
+
+// ---------------- 
+
+let video = ['youtube', 'vimeo', 'rutube'], // оператор разворота
+    blogs = ['wordpress', 'blogger', 'livejournal'],
+    internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+let num = [2, 5, 'path'];
+log(...num);
+// ----------------
+let array = ['a', 'b'];
+let secArr = [...array];
+console.log(array);
+console.log(secArr);
+// ----------------
+let q = {
+  one: 1,
+  two: 2
+};
+let newQ = {...q};
+console.log(newQ);
