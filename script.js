@@ -200,28 +200,43 @@
 
 // ---------------- 
 
-let video = ['youtube', 'vimeo', 'rutube'], // оператор разворота
-    blogs = ['wordpress', 'blogger', 'livejournal'],
-    internet = [...video, ...blogs, 'vk', 'facebook'];
+// let video = ['youtube', 'vimeo', 'rutube'], // оператор разворота
+//     blogs = ['wordpress', 'blogger', 'livejournal'],
+//     internet = [...video, ...blogs, 'vk', 'facebook'];
 
-console.log(internet);
+// console.log(internet);
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-let num = [2, 5, 'path'];
-log(...num);
-// ----------------
-let array = ['a', 'b'];
-let secArr = [...array];
-console.log(array);
-console.log(secArr);
-// ----------------
-let q = {
-  one: 1,
-  two: 2
-};
-let newQ = {...q};
-console.log(newQ);
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// let num = [2, 5, 'path'];
+// log(...num);
+// // ----------------
+// let array = ['a', 'b'];
+// let secArr = [...array];
+// console.log(array);
+// console.log(secArr);
+// // ----------------
+// let q = {
+//   one: 1,
+//   two: 2
+// };
+// let newQ = {...q};
+// console.log(newQ);
+
+// //  ООП
+// const soldier = {
+//   health: 920,
+//   armor: 270,
+//   sayHello() {
+//     console.log('Hello');
+//   }
+// }; 
+
+// const john = Object.create(soldier);
+// john.__proto__ = soldier; // - уже не используется
+// Object.setPrototypeOf(john, soldier); // - можно использовать
+// console.log(john.armor);
+// john.sayHello();
